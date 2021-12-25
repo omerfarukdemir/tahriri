@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tahriri"
+version = "0.1.0"
+description = ""
+authors = ["Omer Faruk Demir <omerfarukde@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.9"
+Flask = "2.0.2"
+stem = "1.8.0"
+python-dotenv = "0.19.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
