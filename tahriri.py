@@ -21,8 +21,7 @@ with Controller.from_port() as controller:
     password = os.environ.get("TOR_PASSWORD")
 
     if password is None:
-        app.logger.error("Couldn't find TOR_PASSWORD")
-        exit(1)
+        exit("Couldn't find TOR_PASSWORD")
 
     controller.authenticate(password)
 
@@ -31,9 +30,8 @@ with Controller.from_port() as controller:
     service = controller.create_hidden_service(path=data_directory, port=80, target_port=5000)
 
     if service.hostname is None:
-        app.logger.error("Run the application in the same user as tor service!")
         controller.remove_hidden_service(path=data_directory)
-        exit(1)
+        exit("Run the application in the same user as tor service!")
 
     app.logger.info("Address:" + service.hostname)
 

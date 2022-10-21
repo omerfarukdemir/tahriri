@@ -1,0 +1,10 @@
+name: tahriri
+
+dependencies:
+  - python=3.10
+  - pip
+
+  - pip:
+    - Flask==2.2.2
+    - stem==1.8.1
+    - python-dotenv==0.21.0
