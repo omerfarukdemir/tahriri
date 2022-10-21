@@ -23,4 +23,4 @@ HashedControlPassword {{password_hash}}
 ```
 - Restart tor service: `service tor restart`
 #### Run
-```python tahriri.py```
+- ```python tahriri.py```
